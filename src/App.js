@@ -1,10 +1,16 @@
 import './App.css';
+import {
+  Routes, Route
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      ertyui
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={} />
+        <Route path='/categories' element={} />
+      </Routes>
+    </>
   );
 }
 
