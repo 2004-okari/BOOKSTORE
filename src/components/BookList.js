@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import Book from "./Book";
 
 function BookList() {

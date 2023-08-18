@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 function Book(props) {
   const { category, title, author } = props;
 
