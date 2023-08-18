@@ -8,6 +8,6 @@ function CreateBook() {
       </form>
     </>
   );
-};
+}
 
 export default CreateBook;

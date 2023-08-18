@@ -11,6 +11,6 @@ function Book(props) {
       <button className="delete-btn">Delete</button>
     </div>
   );
-};
+}
 
 export default Book;
