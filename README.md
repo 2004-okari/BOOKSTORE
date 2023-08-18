@@ -93,10 +93,10 @@ Will deploy the project using netlify.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- 1. Project 2: Add reducers and actions.
-- 2. Project 3: Use Redux in React components.
-- 3 Project 4: Connect to API.
-- 4 Project 5: Styling.
+- Project 2: Add reducers and actions.
+- Project 3: Use Redux in React components.
+- Project 4: Connect to API.
+- Project 5: Styling.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
