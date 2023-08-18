@@ -16,7 +16,6 @@ function App() {
         <Route path='/categories' element={<Category />} />
       </Routes>
       <CreateBook />
-      <div>dfghjkiuyftuhi</div>
     </>
   );
 }
