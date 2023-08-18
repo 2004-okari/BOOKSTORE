@@ -5,7 +5,6 @@ import {
 import Category from './components/Categories';
 import BookList from './components/BookList';
 import Navigation from './components/Navigation';
-import CreateBook from './components/CreateBook';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Route path="/" element={<BookList />} />
         <Route path="/categories" element={<Category />} />
       </Routes>
-      <CreateBook />
     </>
   );
 }

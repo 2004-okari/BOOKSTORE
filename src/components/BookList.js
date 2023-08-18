@@ -1,4 +1,5 @@
 import Book from './Book';
+import CreateBook from './CreateBook';
 
 function BookList() {
   const library = [
@@ -27,6 +28,7 @@ function BookList() {
       {library.map((book) => (
         <Book key={book.id} category={book.category} title={book.title} author={book.author} />
       ))}
+      <CreateBook />
     </>
   );
 }
