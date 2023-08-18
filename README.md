@@ -27,11 +27,11 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [MATH_MAGICIANS] <a name="about-project"></a>
+## 📖 [BOOKSTORE] <a name="about-project"></a>
 
-My Math magicians project in Microverse.
+My Bookstore project in Microverse.
 
-**[MATH_MAGICIANS]** is a project experience that Microverse offers to help nuture your skills in designing application based on API data.  
+**[BOOKSTORE]** is a project experience that Microverse offers to help nuture your skills in designing application based on API data.  
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -45,8 +45,6 @@ My Math magicians project in Microverse.
 ### Key Features <a name="key-features"></a>
 
  1. Setup with create React app
- 2. It has a built in calculator
- 3. It fetches quotes from an eternal API
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -60,22 +58,21 @@ An extension to your browser
 
 Clone this repository to your desired folder:
 
-git clone [MATH_MAGICIANS](https://github.com/2004-okari/MATH_MAGICIANS)
+git clone [BOOKSTORE](https://github.com/2004-okari/BOOKSTORE)
 ### Install
 
 Install this project with:
 
-- `cd MATH_MAGICIANS`
-- `git clone https://github.com/2004-okari/MATH_MAGICIANS.git`
-- `npm install`
+- `cd bookstore`
+- `git clone https://github.com/2004-okari/BOOKSTORE.git`
   
 ### Usage
 
 To run the project, execute the following command:
 Open the index.html file on the browser or use a VS code extension server to start the project`
 
-- run ***npm i*** or ***npm install*** in your terminal to download all the packages needed to make the project run
-- run ***npm run start*** or ***npm start*** to open the project in your browser
+- run `npm install` or `npm i` in your terminal to download all the packages needed to make the project run
+- run `npm run start` or `npm start` to open the project in your browser
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -96,13 +93,10 @@ Will deploy the project using netlify.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Project 1: Setup.
-- Project 2: Components.
-- Project 3: Events.
-- Project 4: Fetch data from API.
-- Project 5: Full website.
-- Project 6: Tests (pair programming).
-Exercise: Deploy.
+- 1. Project 2: Add reducers and actions.
+- 2. Project 3: Use Redux in React components.
+- 3 Project 4: Connect to API.
+- 4 Project 5: Styling.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -110,7 +104,7 @@ Exercise: Deploy.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/2004-okari/MATH_MAGICIANS/issues).
+Feel free to check the [issues page](https://github.com/2004-okari/BOOKSTORE/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
