@@ -1,6 +1,6 @@
 import './App.css';
 import {
-  Routes, Route,
+  Routes, Route
 } from 'react-router-dom';
 import Category from './components/Categories';
 import BookList from './components/BookList';
