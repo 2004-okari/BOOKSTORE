@@ -1,35 +1,21 @@
-import Book from './Book';
-import CreateBook from './CreateBook';
+import React from 'react';
+import { useSelector } from 'react-redux';
+
 
 function BookList() {
-  const library = [
-    {
-      id: 1,
-      category: 'Action',
-      title: 'The Hunger Games',
-      author: 'Suzanne Collins',
-    },
-    {
-      id: 2,
-      category: 'Action',
-      title: 'The Hunger Games',
-      author: 'Suzanne Collins',
-    },
-    {
-      id: 3,
-      category: 'Action',
-      title: 'The Hunger Games',
-      author: 'Suzanne Collins',
-    },
-  ];
+  const books = useSelector(state => state.books.books);
 
   return (
-    <>
-      {library.map((book) => (
-        <Book key={book.id} category={book.category} title={book.title} author={book.author} />
-      ))}
-      <CreateBook />
-    </>
+    <div>
+      <h2>List of Books</h2>
+      <ul>
+        {books.map(book => (
+          <li key={book.id}>
+            {book.title} by {book.author}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
