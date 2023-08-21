@@ -22,13 +22,13 @@ function CreateBook() {
           type="text"
           placeholder="Book Title"
           value={title}
-          onChange={e => setTitle(e.target.value)}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <input
           type="text"
           placeholder="Author"
           value={author}
-          onChange={e => setAuthor(e.target.value)}
+          onChange={(e) => setAuthor(e.target.value)}
         />
         <button type="button" onClick={handleAddBook}>
           Add Book
