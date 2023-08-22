@@ -3,6 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import CreateBook from './CreateBook';
 import { removeBook } from '../redux/books/booksSlice';
 
+// BookList.js
+
+// ...
+
 function BookList() {
   const books = useSelector((state) => state.books.books);
   const dispatch = useDispatch();
@@ -12,15 +16,11 @@ function BookList() {
       <h2>List of Books</h2>
       <ul>
         {books.map((book) => (
-          <li key={book.id}>
-            <p>
-              {book.title}
-            </p>
+          <li key={book.item_id}>
+            <p>{book.title}</p>
             by
-            <p>
-              {book.author}
-            </p>
-            <button type="button" onClick={() => dispatch(removeBook())}>delete</button>
+            <p>{book.author}</p>
+            <button type="button" onClick={() => dispatch(removeBook(book.item_id))}>delete</button>
           </li>
         ))}
       </ul>
