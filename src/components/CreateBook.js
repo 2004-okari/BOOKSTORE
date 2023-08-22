@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from './redux/booksSlice';
+import { addBook } from '../redux/books/booksSlice';
 
 function CreateBook() {
   const [title, setTitle] = useState('');

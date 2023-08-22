@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import CreateBook from './CreateBook';
 
 function BookList() {
   const books = useSelector((state) => state.books.books);
@@ -13,10 +14,12 @@ function BookList() {
             {book.title}
             {' '}
             by
+            {' '}
             {book.author}
           </li>
         ))}
       </ul>
+      <CreateBook />
     </div>
   );
 }
