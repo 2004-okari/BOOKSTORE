@@ -8,9 +8,7 @@ const categoriesSlice = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    getCategoryStatus: (state) => {
-      return { ...state, categories: ['Under construction'] };
-    },
+    getCategoryStatus: (state) => ({ ...state, categories: ['Under construction'] }),
   },
 });
 
