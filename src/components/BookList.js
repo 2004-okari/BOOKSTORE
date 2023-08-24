@@ -1,30 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { fetchBooks } from '../Hook/FetchData';
 import CreateBook from './CreateBook';
-import { removeBook } from '../redux/books/booksSlice';
-
-// BookList.js
-
-// ...
 
 function BookList() {
-  const books = useSelector((state) => state.books.books);
+  const fetchBooksState = useSelector((state) => state.books); // Use the correct slice name here
   const dispatch = useDispatch();
+  const { books, loading, error } = fetchBooksState; // Destructure properties from the state
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
 
   return (
     <div>
-      <h2>List of Book</h2>
+      <h2>List of Books</h2>
+      <CreateBook />
+
+      <p>
+        Total number of books:
+        {books.length}
+      </p>
+
       <ul>
         {books.map((book) => (
           <li key={book.item_id}>
             <p>{book.title}</p>
-            by
-            <p>{book.author}</p>
-            <button type="button" onClick={() => dispatch(removeBook(book.item_id))}>delete</button>
+            <p>
+              Category:
+              {book.category}
+            </p>
           </li>
         ))}
       </ul>
-      <CreateBook />
     </div>
   );
 }

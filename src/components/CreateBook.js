@@ -1,18 +1,43 @@
-// CreateBook.js
-
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import axios from 'axios'; // Import axios
 import { addBook } from '../redux/books/booksSlice';
+
+const API_ID = 'HEuPwpriYXYbIgvPciUk';
+const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
 
 function CreateBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
 
-  const handleAddBook = () => {
-    dispatch(addBook({ id: Date.now(), title, author }));
-    setTitle('');
-    setAuthor('');
+  const handleAddBook = async () => {
+    try {
+      const response = await axios.post(
+        `${API_URL}/apps/${API_ID}/books`,
+        {
+          item_id: Date.now(),
+          title,
+          author,
+          category: 'N/A',
+        },
+      );
+
+      if (response.status === 200) {
+        dispatch(
+          addBook({
+            id: Date.now(),
+            title,
+            author,
+            category: 'N/A',
+          }),
+        );
+        setTitle('');
+        setAuthor('');
+      }
+    } catch (error) {
+      console.error('Error adding book:', error);
+    }
   };
 
   return (
