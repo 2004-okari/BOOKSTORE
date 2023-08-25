@@ -10,7 +10,6 @@ const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/book
 function BookList() {
   const dispatch = useDispatch();
   const library = useSelector((state) => state.books.books);
-  // const books = Object.values(library).reduce((acc, books) => acc.concat(books), []);
   const books = Object.entries(library).map(([identifier, data]) => ({
     identifier,
     data,
