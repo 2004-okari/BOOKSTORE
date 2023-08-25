@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './booklist.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBooks, removeBook } from '../redux/books/booksSlice';
@@ -49,23 +50,31 @@ function BookList() {
   }
 
   return (
-    <div>
+    <div className='cover-div'>
+      <p className='counter'>
+        {books && books.length}
+        {' '}
+        books
+      </p>
       {books && books.length > 0 ? (
-        <ul>
+        <ul className='list-div'>
           {books.map((book) => (
-            <li key={book.identifier}>
-              <h3>
-                Author:
-                {book.data[0].author}
-              </h3>
-              <p>
-                Title:
-                {book.data[0].title}
-              </p>
-              <div>
-                <p>Comment</p>
-                <p>Edit</p>
-                <button type="button" onClick={() => deleteResource(book.identifier)}>Delete</button>
+            <li key={book.identifier} className='list'>
+              <div className='details'>
+                <p className='text-1'>
+                  <span className='text-3'>Author:{" "}
+                    </span>
+                  {book.data[0].author}
+                </p>
+                <p className='text-2'>
+                  <span className='text-4'>Title:{" "}</span>
+                  {book.data[0].title}
+                </p>
+              </div>
+              <div className='actions'>
+                <p className='act-1'>Comment</p>
+                <p className='act-1'>Edit</p>
+                <button className='button' type="button" onClick={() => deleteResource(book.identifier)}>Delete</button>
               </div>
             </li>
           ))}
@@ -73,11 +82,7 @@ function BookList() {
       ) : (
         <p>No books found</p>
       )}
-      <p>
-        {books && books.length}
-        {' '}
-        books
-      </p>
+      
       <CreateBook />
     </div>
   );
