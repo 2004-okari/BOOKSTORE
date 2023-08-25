@@ -20,8 +20,10 @@ function BookList() {
   const loading = useSelector((state) => state.books.loading);
   const error = useSelector((state) => state.books.error);
 
+  // eslint-disable-next-line
   const deleteResource = async (item_id) => {
     try {
+      // eslint-disable-next-line
       await axios.delete(`${API_URL}/apps/${API_ID}/books/${item_id}`);
       console.log('Deleted:', item_id);
       dispatch(removeBook(item_id));
@@ -53,8 +55,14 @@ function BookList() {
         <ul>
           {books.map((book) => (
             <li key={book.identifier}>
-              <h3>Author: {book.data[0].author}</h3>
-              <p>Title: {book.data[0].title}</p>
+              <h3>
+                Author:
+                {book.data[0].author}
+              </h3>
+              <p>
+                Title:
+                {book.data[0].title}
+              </p>
               <div>
                 <p>Comment</p>
                 <p>Edit</p>
