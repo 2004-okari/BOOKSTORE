@@ -1,46 +1,58 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchBooks } from '../Hook/FetchData';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBooks } from '../redux/books/booksSlice';
 import CreateBook from './CreateBook';
 
 function BookList() {
-  const fetchBooksState = useSelector((state) => state.books); // Use the correct slice name here
   const dispatch = useDispatch();
-  const { books, loading, error } = fetchBooksState; // Destructure properties from the state
+  const library = useSelector((state) => state.books.books);
+  const books = Object.values(library).reduce((acc, books) => acc.concat(books), []);
+  console.log(books);
+  const loading = useSelector((state) => state.books.loading);
+  const error = useSelector((state) => state.books.error);
 
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <div>Loading...</div>;
   }
 
   if (error) {
-    return <p>Error: {error}</p>;
+    return (
+      <div>
+        Error:
+        {error.message}
+      </div>
+    );
   }
 
   return (
     <div>
-      <h2>List of Books</h2>
-      <CreateBook />
-
+      {books && books.length > 0 ? (
+        <ul>
+          {books.map((book) => (
+            <li key={book.item_id}>
+              <h3>{book.title}</h3>
+              <p>{book.author}</p>
+              <div>
+                <p>Comment</p>
+                <p>Edit</p>
+                <button type="button">Delete</button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No books found</p>
+      )}
       <p>
-        Total number of books:
-        {books.length}
+        {books && books.length}
+        {' '}
+        books
       </p>
-
-      <ul>
-        {books.map((book) => (
-          <li key={book.item_id}>
-            <p>{book.title}</p>
-            <p>
-              Category:
-              {book.category}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <CreateBook />
     </div>
   );
 }

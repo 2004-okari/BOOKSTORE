@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import axios from 'axios'; // Import axios
-import { addBook } from '../redux/books/booksSlice';
+import axios from 'axios';
 
-const API_ID = 'HEuPwpriYXYbIgvPciUk';
+const API_ID = 'u3BFViY5zE36mpKmwqF4';
 const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
 
 function CreateBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const dispatch = useDispatch();
 
   const handleAddBook = async () => {
     try {
@@ -22,18 +19,8 @@ function CreateBook() {
           category: 'N/A',
         },
       );
-
       if (response.status === 200) {
-        dispatch(
-          addBook({
-            id: Date.now(),
-            title,
-            author,
-            category: 'N/A',
-          }),
-        );
-        setTitle('');
-        setAuthor('');
+        alert('Hello');
       }
     } catch (error) {
       console.error('Error adding book:', error);
