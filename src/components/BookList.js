@@ -50,31 +50,36 @@ function BookList() {
   }
 
   return (
-    <div className='cover-div'>
-      <p className='counter'>
-        {books && books.length}
-        {' '}
-        books
-      </p>
+    <div className="cover-div">
       {books && books.length > 0 ? (
-        <ul className='list-div'>
+        <ul className="list-div">
           {books.map((book) => (
-            <li key={book.identifier} className='list'>
-              <div className='details'>
-                <p className='text-1'>
-                  <span className='text-3'>Author:{" "}
-                    </span>
-                  {book.data[0].author}
-                </p>
-                <p className='text-2'>
-                  <span className='text-4'>Title:{" "}</span>
+            <li key={book.identifier} className="list">
+              <div className="details">
+                <p className="text-1">Fiction</p>
+                <p className="text-2">
                   {book.data[0].title}
                 </p>
+                <p className="text-3">
+                  {book.data[0].author}
+                </p>
               </div>
-              <div className='actions'>
-                <p className='act-1'>Comment</p>
-                <p className='act-1'>Edit</p>
-                <button className='button' type="button" onClick={() => deleteResource(book.identifier)}>Delete</button>
+              <div className="actions">
+                <p className="act-1">Comment</p>
+                <p className="act-1">Edit</p>
+                <button type="button" className="button" onClick={() => deleteResource(book.identifier)}>Delete</button>
+              </div>
+              <div className="div-1">
+                <div className="div-2" />
+              </div>
+              <div className="progress">
+                <p className="per">64%</p>
+                <p className="complete">Completed</p>
+              </div>
+              <div className="update">
+                <p className="update-title">CURRENT CHAPTER</p>
+                <p className="chapter">Chapter 17</p>
+                <button type="button" className="prog-btn">UPDATE PROGRESS</button>
               </div>
             </li>
           ))}
@@ -82,7 +87,7 @@ function BookList() {
       ) : (
         <p>No books found</p>
       )}
-      
+
       <CreateBook />
     </div>
   );

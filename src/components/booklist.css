@@ -1,69 +1,147 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 .cover-div {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   width: 94%;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
-  border-radius: 6px;
-  padding: 10px;
+  padding: 30px 50px;
+
   .list-div {
     list-style: none;
+
     .list {
-      padding: 10px;
-      border-radius: 6px;
+      position: relative;
+      padding: 20px 0 10px 30px;
       margin-bottom: 10px;
-      background-color: #E8E8E8;
-      
+      background-color: #fff;
+
       .details {
         display: flex;
         flex-direction: column;
-      .text-1 {
-        color: #100F0F;
-        letter-spacing: 1.5px;
-        font-size: 20px;
-        font-weight: 500;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+
+        .text-1 {
+          color: #bdcdd6;
+          letter-spacing: 1.5px;
+          font-size: 16px;
+          font-weight: 500;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        }
+
+        .text-2 {
+          color: #100f0f;
+          letter-spacing: 1.5px;
+          font-size: 28px;
+          font-weight: 600;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
         .text-3 {
-          color: #0F3D3E;
+          color: #0290ff;
+          letter-spacing: 1.5px;
           font-size: 16px;
+          font-weight: 100;
+          font-family: Arial, Helvetica, sans-serif;
         }
       }
-      .text-2 {
-        color: #100F0F;
-        letter-spacing: 1.5px;
-        font-size: 20px;
-        font-weight: 500;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        .text-4 {
-          color: #0F3D3E;
-          font-size: 16px;
+
+      .actions {
+        width: 94%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+        color: #0290ff;
+
+        .act-1 {
+          margin: 10px 20px 10px 0;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
         }
-      }
-    }
-    .actions {
-      width: 94%;
-      max-width: 600px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      .act-1 {
-        margin: 10px 20px 10px 0;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: #678983;
-        }
+
         .button {
           width: 80px;
           height: 24px;
           border: none;
           border-radius: 6px;
-          box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+          background-color: #fff;
+          color: #0290ff;
+
           &:hover {
-            background-color: #0F3D3E;
+            background-color: #0f3d3e;
           }
+
           &:active {
             background-color: #678983;
           }
+        }
+      }
+
+      .div-1 {
+        width: 68px;
+        height: 68px;
+        background-color: #0290ff;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+
+        .div-2 {
+          width: 60px;
+          height: 60px;
+          background-color: #fff;
+          border-radius: 50%;
+        }
+      }
+
+      .progress {
+        position: absolute;
+        top: 50%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+
+        .per {
+          font-size: 32px;
+          font-weight: 400;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        }
+
+        .complete {
+          font-size: 18px;
+          font-weight: 400;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          color: #bdcdd6;
+        }
+      }
+
+      .update {
+        position: absolute;
+        top: 50%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+
+        .update-title {
+          color: #bdcdd6;
+        }
+
+        .chapter {
+          margin-bottom: 10px;
+        }
+
+        .prog-btn {
+          color: #f1f1f1;
+          background-color: #0290ff;
+          width: 184px;
+          height: 34px;
+          border: none;
+          border-radius: 6px;
         }
       }
     }
