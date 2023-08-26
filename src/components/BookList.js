@@ -66,16 +66,19 @@ function BookList() {
               </div>
               <div className="actions">
                 <p className="act-1">Comment</p>
+                <div className="line-4" />
                 <p className="act-1">Edit</p>
+                <div className="line-4" />
                 <button type="button" className="button" onClick={() => deleteResource(book.identifier)}>Delete</button>
               </div>
               <div className="div-1">
                 <div className="div-2" />
               </div>
               <div className="progress">
-                <p className="per">64%</p>
+                <p className="per">100%</p>
                 <p className="complete">Completed</p>
               </div>
+              <div className="line-3" />
               <div className="update">
                 <p className="update-title">CURRENT CHAPTER</p>
                 <p className="chapter">Chapter 17</p>
@@ -87,6 +90,7 @@ function BookList() {
       ) : (
         <p>No books found</p>
       )}
+      <div className="line" />
 
       <CreateBook />
     </div>

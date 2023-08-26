@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 
 .cover-div {
-  background-color: #f1f1f1;
-  width: 94%;
-  max-width: 1400px;
+  background-color: #f5f6fa;
   margin: 0 auto;
   padding: 30px 50px;
 
@@ -15,33 +15,36 @@
       padding: 20px 0 10px 30px;
       margin-bottom: 10px;
       background-color: #fff;
+      border-radius: 4px;
+      border: 1px solid #e8e8e8;
 
       .details {
         display: flex;
         flex-direction: column;
 
         .text-1 {
-          color: #bdcdd6;
+          opacity: 0.5;
+          font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          font-weight: bold;
+          color: #121212;
           letter-spacing: 1.5px;
-          font-size: 16px;
-          font-weight: 500;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
         }
 
         .text-2 {
-          color: #100f0f;
+          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+          font-size: 22px;
+          font-weight: bold;
           letter-spacing: 1.5px;
-          font-size: 28px;
-          font-weight: 600;
-          font-family: Arial, Helvetica, sans-serif;
+          margin: 4px 0;
         }
 
         .text-3 {
-          color: #0290ff;
+          color: #4386bf;
           letter-spacing: 1.5px;
-          font-size: 16px;
-          font-weight: 100;
-          font-family: Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          font-weight: 300;
+          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
         }
       }
 
@@ -52,28 +55,32 @@
         flex-direction: row;
         align-items: center;
         margin-top: 20px;
-        color: #0290ff;
+        color: #4386bf;
 
         .act-1 {
-          margin: 10px 20px 10px 0;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          font-weight: 300;
+          font-stretch: normal;
+          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+        }
+
+        .line-4 {
+          width: 2px;
+          height: 24px;
+          border: 1px solid #e8e8e8;
+          margin: 0 20px;
         }
 
         .button {
-          width: 80px;
           height: 24px;
           border: none;
+          font-size: 14;
+          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
           border-radius: 6px;
           background-color: #fff;
-          color: #0290ff;
-
-          &:hover {
-            background-color: #0f3d3e;
-          }
-
-          &:active {
-            background-color: #678983;
-          }
+          color: #4386bf;
+          font-weight: 300;
+          font-stretch: normal;
         }
       }
 
@@ -86,7 +93,7 @@
         place-items: center;
         position: absolute;
         top: 50%;
-        left: 55%;
+        left: 50%;
         transform: translate(-50%, -50%);
 
         .div-2 {
@@ -100,21 +107,32 @@
       .progress {
         position: absolute;
         top: 50%;
-        left: 65%;
+        left: 60%;
         transform: translate(-50%, -50%);
 
         .per {
           font-size: 32px;
           font-weight: 400;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         }
 
         .complete {
-          font-size: 18px;
+          font-size: 14px;
           font-weight: 400;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          color: #bdcdd6;
+          font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+          color: #121212;
+          opacity: 0.5;
         }
+      }
+
+      .line-3 {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        height: 70px;
+        width: 2px;
+        border: 1px solid #e8e8e8;
       }
 
       .update {
@@ -125,18 +143,26 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
 
         .update-title {
-          color: #bdcdd6;
+          color: #121212;
+          opacity: 0.5;
+          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+          font-size: 13px;
+          font-weight: 300;
         }
 
         .chapter {
           margin-bottom: 10px;
+          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          font-weight: 300;
+          color: #121212;
         }
 
         .prog-btn {
-          color: #f1f1f1;
+          color: #fff;
+          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
           background-color: #0290ff;
           width: 184px;
           height: 34px;
@@ -146,4 +172,11 @@
       }
     }
   }
+}
+
+.line {
+  width: 1163px;
+  height: 2px;
+  margin: 40px 1px 20px 0;
+  border: solid 1px #e8e8e8;
 }
