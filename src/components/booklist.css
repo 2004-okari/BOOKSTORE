@@ -32,7 +32,7 @@
         }
 
         .text-2 {
-          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+          font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
           font-size: 22px;
           font-weight: bold;
           letter-spacing: 1.5px;
@@ -44,7 +44,7 @@
           letter-spacing: 1.5px;
           font-size: 14px;
           font-weight: 300;
-          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+          font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
         }
       }
 
@@ -61,7 +61,7 @@
           font-size: 14px;
           font-weight: 300;
           font-stretch: normal;
-          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+          font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
         }
 
         .line-4 {
@@ -75,7 +75,7 @@
           height: 24px;
           border: none;
           font-size: 14px;
-          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+          font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
           border-radius: 6px;
           background-color: #fff;
           color: #4386bf;
@@ -147,14 +147,14 @@
         .update-title {
           color: #121212;
           opacity: 0.5;
-          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+          font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
           font-size: 13px;
           font-weight: 300;
         }
 
         .chapter {
           margin-bottom: 10px;
-          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+          font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
           font-size: 16px;
           font-weight: 300;
           color: #121212;
@@ -162,7 +162,7 @@
 
         .prog-btn {
           color: #fff;
-          font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+          font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
           background-color: #0290ff;
           width: 184px;
           height: 34px;
