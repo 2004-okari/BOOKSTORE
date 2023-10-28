@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './booklist.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBooks, removeBook } from '../redux/books/booksSlice';
@@ -49,23 +50,39 @@ function BookList() {
   }
 
   return (
-    <div>
+    <div className="cover-div">
       {books && books.length > 0 ? (
-        <ul>
+        <ul className="list-div">
           {books.map((book) => (
-            <li key={book.identifier}>
-              <h3>
-                Author:
-                {book.data[0].author}
-              </h3>
-              <p>
-                Title:
-                {book.data[0].title}
-              </p>
-              <div>
-                <p>Comment</p>
-                <p>Edit</p>
-                <button type="button" onClick={() => deleteResource(book.identifier)}>Delete</button>
+            <li key={book.identifier} className="list">
+              <div className="details">
+                <p className="text-1">Fiction</p>
+                <p className="text-2">
+                  {book.data[0].title}
+                </p>
+                <p className="text-3">
+                  {book.data[0].author}
+                </p>
+              </div>
+              <div className="actions">
+                <p className="act-1">Comment</p>
+                <div className="line-4" />
+                <p className="act-1">Edit</p>
+                <div className="line-4" />
+                <button type="button" className="button" onClick={() => deleteResource(book.identifier)}>Delete</button>
+              </div>
+              <div className="div-1">
+                <div className="div-2" />
+              </div>
+              <div className="progress">
+                <p className="per">100%</p>
+                <p className="complete">Completed</p>
+              </div>
+              <div className="line-3" />
+              <div className="update">
+                <p className="update-title">CURRENT CHAPTER</p>
+                <p className="chapter">Chapter 17</p>
+                <button type="button" className="prog-btn">UPDATE PROGRESS</button>
               </div>
             </li>
           ))}
@@ -73,11 +90,8 @@ function BookList() {
       ) : (
         <p>No books found</p>
       )}
-      <p>
-        {books && books.length}
-        {' '}
-        books
-      </p>
+      <div className="line" />
+
       <CreateBook />
     </div>
   );
